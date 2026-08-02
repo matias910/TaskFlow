@@ -18,6 +18,11 @@ function App() {
 
   return (
     <>
+
+        
+
+
+        { /*
         <main className={`font-[Inter] flex min-h-screen overflow-x-hidden ${theme === 'Dark' ? 'bg-gray-800 text-white' : 'bg-white text-gray-800'} transition-all duration-700 ease-in-out `}>
             <SideBar theme={theme} user={user} show={showSideBar}/>
             <div className={`flex flex-col w-full mt-4 ml-7 gap-4`}>
@@ -38,6 +43,7 @@ function App() {
                 </div>
             </div>
         </main>
+        */ }
     </>
   )
 }

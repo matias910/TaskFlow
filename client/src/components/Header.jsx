@@ -15,7 +15,7 @@ function Header({theme, toggleTheme}) {
                     <button className="flex" onClick={() => {}} type="button">
                         <SearchIcon className={`h-8 w-8 transition-all duration-700 ease-in-out ${iconColorClass}`}/>
                     </button>
-                    <input type="text" placeholder="Search..." className={`p-2 w-full rounded-lg ${theme === "Dark" ? "placeholder:text-gray-300" : "placeholder:text-gray-500"}`}/>
+                    <input type="text" placeholder="Search..." className={`p-2 w-full bg-transparent outline-none rounded-lg ${theme === "Dark" ? "placeholder:text-gray-300" : "placeholder:text-gray-500"}`}/>
                 </div>
                 <div className={`flex gap-4 items-center transition-all duration-700 ease-in-out ${theme === "Dark" ? "bg-gray-800" : "bg-white"}`}>
                     <button type="button">
