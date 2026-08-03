@@ -7,45 +7,58 @@ import MoreIcon from './assets/Icons/more.svg?react'
 import AddIcon from './assets/Icons/add.svg?react'
 
 function App() {
-
     const [theme, setTheme] = useState("Dark")
-        const [showSideBar, setShowSideBar] = useState(true)
+    const [showSideBar, setShowSideBar] = useState(true)
+
     const toggleTheme = () => {
         setTheme(theme === "Dark" ? "Light" : "Dark")
     }
+
     const user = "Matias"
 
+    return (
+        <div className={`flex min-h-screen overflow-x-hidden font-[Inter] transition-colors duration-900 ease-in-out ${
+            theme === 'Dark' ? 'bg-gray-900 text-white' : 'bg-gray-50 text-gray-800'
+        }`}>
+            <SideBar theme={theme} user={user} show={showSideBar} />
 
-  return (
-    <>
+            <div className="flex min-w-0 flex-1 flex-col p-4 space-y-6 transition-all duration-900 sm:p-6">
+                <div className="flex gap-4 border-b pb-4 max-h-20 sm:flex-row sm:items-center">
+                    <button
+                        onClick={() => setShowSideBar(!showSideBar)}
+                        className={` p-2.5 rounded-lg transition-all duration-900 hover:bg-purple-700 hover:text-white ${
+                            theme === 'Dark' ? 'bg-gray-700 text-white' : 'bg-gray-200 text-gray-800'
+                        }`}
+                        title="Toggle Sidebar"
+                    >
+                        <MoreIcon className="w-6 h-6" />
+                    </button>
 
-        
+                    <div className="min-w-0 flex-1">
+                        <Header theme={theme} toggleTheme={toggleTheme} show/>
+                    </div>
+                </div>
 
+                <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                    <div>
+                        <h1 className="text-3xl font-bold tracking-tight">Good Morning, {user} 👋</h1>
+                        <p className={`mt-1 text-sm ${theme === 'Dark' ? 'text-gray-400' : 'text-gray-500'}`}>
+                            Here's an overview of your tasks for today.
+                        </p>
+                    </div>
 
-        { /*
-        <main className={`font-[Inter] flex min-h-screen overflow-x-hidden ${theme === 'Dark' ? 'bg-gray-800 text-white' : 'bg-white text-gray-800'} transition-all duration-700 ease-in-out `}>
-            <SideBar theme={theme} user={user} show={showSideBar}/>
-            <div className={`flex flex-col w-full mt-4 ml-7 gap-4`}>
-                <button onClick={() => setShowSideBar(!showSideBar)}
-                        className={`absolute top-1/2 -translate-y-1/2 z-50 p-2 rounded-lg transition-all duration-700 ease-in-out
-                        ${showSideBar ? 'left-[17.5rem]' : 'left-2'}
-                        ${theme === 'Dark' ? 'bg-gray-700 text-white' : 'bg-gray-200 text-gray-800'} hover:bg-purple-700 hover:text-white`}
-                >
-                    <MoreIcon />
-                </button>
-                <Header theme={theme} toggleTheme={toggleTheme}/>
-                <div className={`flex items-center justify-between` }>
-                    <span className={`text-4xl font-bold h-min`}>Good Morning, {user}</span>
-                    <button className={`flex items-center gap-2 p-2 rounded-lg mt-4 transition-all duration-700 ease-in-out mr-8 hover:bg-purple-700 hover:translate-x-1 hover:shadow-md ${theme === "Dark" ? "bg-gray-700" : "bg-gray-200"}`}>
-                        <AddIcon />
+                    <button
+                        className={`flex shrink-0 items-center gap-2 self-start whitespace-nowrap rounded-lg px-4 py-2.5 font-medium shadow-sm transition-all duration-900 hover:bg-purple-700 hover:text-white hover:translate-x-1 ${
+                            theme === "Dark" ? "bg-gray-600 text-white" : "bg-gray-200"
+                        }`}
+                    >
+                        <AddIcon className="w-5 h-5" />
                         <span>Add Task</span>
                     </button>
                 </div>
             </div>
-        </main>
-        */ }
-    </>
-  )
+        </div>
+    )
 }
 
 export default App;

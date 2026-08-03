@@ -23,7 +23,10 @@ function SideBar({ theme, user, show}) {
 
     return (
         <aside
-            className={`h-screen shrink-0 overflow-hidden transition-all duration-700 ease-in-out ${show ? 'w-70 p-4' : 'w-0 p-0'} ${theme === 'Dark' ? 'bg-gray-800 text-white' : 'bg-white text-gray-800'} flex flex-col border-r-1 border-gray-400`}>
+            className={`h-screen shrink-0 overflow-hidden transition-all duration-700 ease-in-out flex flex-col border-r-1 border-gray-400
+            ${show ? 'w-70 p-4' : 'w-0 p-0'} 
+            ${theme === 'Dark' ? 'bg-gray-800 text-white' : 'bg-white text-gray-800'} 
+            `}>
             <div className="flex items-center justify-center">
                 <img src={theme === 'Dark' ? LogoDark : LogoLight} alt="Logo" />
             </div>
