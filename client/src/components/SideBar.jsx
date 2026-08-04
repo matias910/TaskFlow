@@ -8,8 +8,10 @@ import StatsIcon from '../assets/Icons/stats.svg?react'
 import SettingsIcon from '../assets/Icons/settings.svg?react'
 import ProfileIcon from '../assets/Icons/profile.svg?react'
 import DropDownIcon from '../assets/Icons/dropDown.svg?react'
+import { useTheme } from '../context/ThemeContext.jsx'
 
-function SideBar({ theme, user, show}) {
+function SideBar({ user, show }) {
+    const { theme } = useTheme()
     const menuItems = [
         { name: 'Dashboard', icon: DashboardIcon },
         { name: 'Tasks', icon: TasksIcon },
@@ -23,7 +25,7 @@ function SideBar({ theme, user, show}) {
 
     return (
         <aside
-            className={`h-100% shrink-0 overflow-hidden transition-all duration-700 ease-in-out flex flex-col gap-30 border-r-1 border-gray-400
+            className={`h-screen shrink-0 overflow-hidden transition-all duration-700 ease-in-out flex flex-col gap-8 border-r border-gray-400
             ${show ? 'w-70 p-4 sm:w-70' : 'w-0 p-0'} 
             ${theme === 'Dark' ? 'bg-gray-800 text-white' : 'bg-white text-gray-800'} 
             `}>

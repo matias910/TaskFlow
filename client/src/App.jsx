@@ -7,14 +7,11 @@ import BigCard from "./components/BigCard.jsx";
 import TodayTasks from "./components/TodayTasks.jsx";
 import MoreIcon from './assets/Icons/more.svg?react'
 import AddIcon from './assets/Icons/add.svg?react'
+import { useTheme } from './context/ThemeContext.jsx'
 
 function App() {
-    const [theme, setTheme] = useState("Dark")
     const [showSideBar, setShowSideBar] = useState(true)
-
-    const toggleTheme = () => {
-        setTheme(theme === "Dark" ? "Light" : "Dark")
-    }
+    const { theme } = useTheme()
 
     const user = "Matias"
 
@@ -22,7 +19,7 @@ function App() {
         <div className={`flex min-h-screen overflow-x-hidden font-[Inter] transition-colors duration-900 ease-in-out ${
             theme === 'Dark' ? 'bg-gray-900 text-white' : 'bg-gray-50 text-gray-800'
         }`}>
-            <SideBar theme={theme} user={user} show={showSideBar} />
+            <SideBar user={user} show={showSideBar} />
 
             <div className="flex min-w-0 flex-1 flex-col p-4 space-y-6 transition-all duration-900 sm:p-6">
                 <div className="flex gap-4 border-b pb-4 max-h-20 sm:flex-row sm:items-center">
@@ -37,7 +34,7 @@ function App() {
                     </button>
 
                     <div className="min-w-0 flex-1">
-                        <Header theme={theme} toggleTheme={toggleTheme} show/>
+                        <Header />
                     </div>
                 </div>
 
@@ -58,8 +55,8 @@ function App() {
                         <span>Add Task</span>
                     </button>
                 </div>
-                <BigCard theme={theme} />
-                <TodayTasks theme={theme} />
+                <BigCard />
+                <TodayTasks />
             </div>
         </div>
     )

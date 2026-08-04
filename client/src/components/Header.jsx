@@ -2,8 +2,10 @@ import SearchIcon from '../assets/Icons/search.svg?react';
 import NotificationIcon from '../assets/Icons/notifications.svg?react';
 import DarkModeIcon from '../assets/Icons/darkMode.svg?react';
 import LightModeIcon from '../assets/Icons/lightMode.svg?react';
+import { useTheme } from '../context/ThemeContext.jsx';
 
-function Header({ theme, toggleTheme }) {
+function Header() {
+    const { theme, toggleTheme } = useTheme()
     const iconColorClass = theme === "Dark" ? "text-white" : "text-gray-800";
     const ThemeIcon = theme === "Dark" ? LightModeIcon : DarkModeIcon;
 

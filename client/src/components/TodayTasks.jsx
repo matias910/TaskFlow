@@ -33,7 +33,7 @@ function TodayTasks({theme}){
                             theme === 'Dark' ? 'bg-gray-800 text-white' : 'bg-gray-300 text-gray-800'
                         }`}
                     >
-                        <input type="checkbox" />
+                        <input type="checkbox" checked={false}/>
 
                         <span className="min-w-0 truncate font-medium">{item.title}</span>
 
