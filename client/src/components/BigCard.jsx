@@ -23,7 +23,7 @@ function BigCard({theme}){
                 const Icon = item.icon
                 return (
                     <li key={index} className={`flex justify-between h-[126px] w-full max-w-[20rem] items-center gap-4 rounded-xl px-10 py-3 transition-all duration-700 ease-in-out hover:translate-x-1 hover:shadow-md
-${theme === 'Dark' ? 'bg-gray-800 text-white' : 'bg-gray-300 text-gray-800'}`}>
+                    ${theme === 'Dark' ? 'bg-gray-800 text-white' : 'bg-gray-300 text-gray-800'}`}>
                         <div className={`flex items-center justify-center rounded-full p-2 transition-all duration-700 ease-in-out ${item.color === 'blue' ? 'bg-blue-500' : item.color === 'green' ? 'bg-green-500' : item.color === 'orange' ? 'bg-orange-500' : 'bg-red-500'}`}>
                             <Icon className={`h-12 w-12 transition-all duration-700 ease-in-out ${item.icon}`}/>
                         </div>
@@ -31,8 +31,8 @@ ${theme === 'Dark' ? 'bg-gray-800 text-white' : 'bg-gray-300 text-gray-800'}`}>
                             <span className="text-sm font-semibold sm:text-base md:text-lg">{item.Category}</span>
                             <span className="text-xs font-medium sm:text-sm md:text-[0.9rem]">{item.amount}</span>
                             <span className="text-xs sm:text-sm">
-        <strong className={`${item.progress > 0 ? 'text-green-400' : 'text-red-500'}`}>{item.progress}%</strong> from yesterday
-    </span>
+                            <strong className={`${item.progress > 0 ? 'text-green-400' : 'text-red-500'}`}>{item.progress}%</strong> from yesterday
+                            </span>
                         </div>
                     </li>
                 )

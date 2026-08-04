@@ -4,6 +4,7 @@ import './App.css'
 import SideBar from './components/SideBar.jsx'
 import Header from "./components/Header.jsx";
 import BigCard from "./components/BigCard.jsx";
+import TodayTasks from "./components/TodayTasks.jsx";
 import MoreIcon from './assets/Icons/more.svg?react'
 import AddIcon from './assets/Icons/add.svg?react'
 
@@ -58,6 +59,7 @@ function App() {
                     </button>
                 </div>
                 <BigCard theme={theme} />
+                <TodayTasks theme={theme} />
             </div>
         </div>
     )
