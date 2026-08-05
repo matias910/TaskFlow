@@ -30,7 +30,7 @@ function UpcomingTasks() {
     };
 
     return (
-        <div className={`w-1/2 rounded-xl p-4 transition-all duration-700 ease-in-out
+        <div className={`w-full rounded-xl p-4 transition-all duration-700 ease-in-out
       ${theme === "Dark" ? "bg-gray-800 text-white" : "bg-gray-300 text-gray-800"}`}>
 
             <div className={`flex items-center justify-between mb-4`}>

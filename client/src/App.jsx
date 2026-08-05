@@ -58,10 +58,14 @@ function App() {
                     </button>
                 </div>
                 <BigCard />
-                <TodayTasks />
-                <div className={`flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between`}>
-                    <CategoryCard />
-                    <UpcomingTasks />
+                <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 lg:items-start">
+                    <div className="flex flex-col gap-6">
+                        <TodayTasks />
+                        <CategoryCard />
+                    </div>
+                    <div className="flex flex-col gap-6">
+                        <UpcomingTasks />
+                    </div>
                 </div>
             </div>
         </div>

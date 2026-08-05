@@ -19,7 +19,7 @@ function Header() {
                 </button>
                 <input
                     type="text"
-                    placeholder="Search..."
+                    placeholder="Search Task.."
                     className={`w-full min-w-0 rounded-lg bg-transparent p-2 outline-none ${
                         theme === "Dark" ? "placeholder:text-gray-300" : "placeholder:text-gray-500"
                     }`}

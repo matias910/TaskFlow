@@ -17,9 +17,19 @@ function TodayTasks() {
     });
 
     return (
-        <ul className={`flex flex-col p-1 gap-2 rounded-lg ${
+
+
+        <ul className={`flex flex-col w-full p-1 gap-2 rounded-lg ${
             theme === 'Dark' ? 'bg-gray-800 text-white' : 'bg-gray-300 text-gray-800'
         }`}>
+            <div className={`flex items-center justify-between border-b px-4 py-3`}>
+                <h2 className="text-lg font-semibold px-4 py-3">Today's Tasks</h2>
+                <button className={`rounded-lg px-3 py-1 text-sm transition-all duration-900 hover:bg-purple-700 hover:text-white hover:translate-x-1 ${
+                    theme === "Dark" ? "bg-gray-600 text-white" : "bg-gray-200 text-gray-800"
+                }`}>
+                    <span>View All</span>
+                </button>
+            </div>
             {todayTasks.map((item, index) => (
                 <li
                     key={index}

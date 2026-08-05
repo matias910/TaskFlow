@@ -9,11 +9,12 @@ function CategoryCard() {
     ).values()];
 
     return (
-        <div className={`flex flex-col rounded-xl w-1/2 p-4
-      ${theme === 'Dark' ? 'bg-gray-800 text-white' : 'bg-gray-300 text-gray-800'}`}>
+        <div className={`flex flex-col rounded-xl w-full p-4 ${
+            theme === 'Dark' ? 'bg-gray-800 text-white' : 'bg-gray-300 text-gray-800'
+        }`}>
             <div className="flex justify-between p-4">
-                <span className={`text-xl`}>Categories</span>
-                <button className={`rounded-lg p-4 ${theme === "Dark" ? "bg-gray-600 text-white" : "bg-gray-200"}`}>
+                <h2 className={`text-xl`}>Categories</h2>
+                <button className={`rounded-lg p-4 transition-all duration-900 hover:bg-purple-700 hover:text-white hover:translate-x-1 ${theme === "Dark" ? "bg-gray-600 text-white" : "bg-gray-200"}`}>
                     <span>View All</span>
                 </button>
             </div>
