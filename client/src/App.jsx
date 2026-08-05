@@ -5,6 +5,8 @@ import SideBar from './components/SideBar.jsx'
 import Header from "./components/Header.jsx";
 import BigCard from "./components/BigCard.jsx";
 import TodayTasks from "./components/TodayTasks.jsx";
+import CategoryCard from "./components/CategoryCard.jsx";
+import UpcomingTasks from "./components/UpcomingTasks.jsx";
 import MoreIcon from './assets/Icons/more.svg?react'
 import AddIcon from './assets/Icons/add.svg?react'
 import { useTheme } from './context/ThemeContext.jsx'
@@ -57,6 +59,10 @@ function App() {
                 </div>
                 <BigCard />
                 <TodayTasks />
+                <div className={`flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between`}>
+                    <CategoryCard />
+                    <UpcomingTasks />
+                </div>
             </div>
         </div>
     )

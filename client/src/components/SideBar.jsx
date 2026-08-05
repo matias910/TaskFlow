@@ -25,7 +25,7 @@ function SideBar({ user, show }) {
 
     return (
         <aside
-            className={`h-screen shrink-0 overflow-hidden transition-all duration-700 ease-in-out flex flex-col gap-8 border-r border-gray-400
+            className={`h-100% shrink-0 overflow-hidden transition-all duration-700 ease-in-out flex flex-col gap-8 border-r border-gray-400
             ${show ? 'w-70 p-4 sm:w-70' : 'w-0 p-0'} 
             ${theme === 'Dark' ? 'bg-gray-800 text-white' : 'bg-white text-gray-800'} 
             `}>
