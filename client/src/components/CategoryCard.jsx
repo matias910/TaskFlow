@@ -20,7 +20,7 @@ function CategoryCard() {
             </div>
 
             <div>
-                <ul className="grid gap-4 pt-5 transition-all duration-700 ease-in-out grid-cols-[repeat(auto-fit,minmax(180px,1fr))]">
+                <ul className="grid gap-4 pt-5 transition-all duration-900 ease-in-out grid-cols-[repeat(auto-fit,minmax(180px,1fr))]">
                     {CategoryList.map((item, index) => {
                         const Icon = item.icon;
 
@@ -30,7 +30,7 @@ function CategoryCard() {
                                 className={`flex justify-between p-2 px-10 rounded-lg ${theme === 'Dark' ? 'bg-gray-900 text-white' : 'bg-gray-200 text-gray-800'}`}
                             >
                                 <div className={`flex items-center gap-2`}>
-                                    {Icon && <Icon className="transition-all duration-700 ease-in-out" />}
+                                    {Icon && <Icon className="transition-all duration-900 ease-in-out" />}
                                 </div>
                                 <div className={`flex flex-col items-center gap-1 transition-all duration-700 ease-in-out`}>
                                     <span>{item.category}</span>

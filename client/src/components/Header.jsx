@@ -4,11 +4,10 @@ import DarkModeIcon from '../assets/Icons/darkMode.svg?react';
 import LightModeIcon from '../assets/Icons/lightMode.svg?react';
 import { useTheme } from '../context/ThemeContext.jsx';
 
-function Header() {
+function Header({ searchTerm, setSearchTerm }) {
     const { theme, toggleTheme } = useTheme()
     const iconColorClass = theme === "Dark" ? "text-white" : "text-gray-800";
     const ThemeIcon = theme === "Dark" ? LightModeIcon : DarkModeIcon;
-
     return (
         <div className={`flex h-auto flex-col gap-3 transition-all duration-700 ease-in-out sm:h-14 sm:flex-row sm:items-center sm:justify-between`}>
             <div className={`flex min-w-0 max-w-200 flex-1 items-center gap-2 rounded-lg border-2 p-2 transition-all duration-700 ease-in-out ${
@@ -20,6 +19,9 @@ function Header() {
                 <input
                     type="text"
                     placeholder="Search Task.."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+
                     className={`w-full min-w-0 rounded-lg bg-transparent p-2 outline-none ${
                         theme === "Dark" ? "placeholder:text-gray-300" : "placeholder:text-gray-500"
                     }`}

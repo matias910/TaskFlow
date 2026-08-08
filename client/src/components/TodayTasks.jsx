@@ -4,6 +4,7 @@ import { useTheme } from '../context/ThemeContext.jsx';
 import { Tasks } from "../data/Tasks.js";
 import { circleColor } from "../utils/IntensityColor.js";
 
+
 function TodayTasks() {
     const { theme } = useTheme();
 

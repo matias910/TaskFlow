@@ -11,8 +11,8 @@ const categoryIcons = {
 };
 
 export const Tasks = [
-    { title: 'Finish the Figma Design', category: 'Programming', time: '08:00 AM', date: '2026-08-05', intensity: 'High'},
-    { title: 'Front Lever Training', category: 'Fitness', time: '10:00 AM', date: '2026-08-05', intensity: 'Medium' },
+    { title: 'Finish the Figma Design', category: 'Programming', time: '08:00 AM', date: '2026-08-08', intensity: 'High'},
+    { title: 'Front Lever Training', category: 'Fitness', time: '10:00 AM', date: '2026-08-08', intensity: 'Medium' },
     { title: 'Take Train to School', category: 'School', time: '12:30 PM', date: '2026-08-05', intensity: 'Low' },
     { title: 'Take Classes', category: 'School', time: '02:00 PM', date: '2026-08-05', intensity: 'Medium' },
     { title: 'Cook', category: 'Life', time: '06:00 PM', date: '2026-08-05', intensity: 'Low' },

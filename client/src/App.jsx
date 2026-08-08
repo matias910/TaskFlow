@@ -7,6 +7,7 @@ import BigCard from "./components/BigCard.jsx";
 import TodayTasks from "./components/TodayTasks.jsx";
 import CategoryCard from "./components/CategoryCard.jsx";
 import UpcomingTasks from "./components/UpcomingTasks.jsx";
+import SearchResults from "./components/SearchResults.jsx";
 import MoreIcon from './assets/Icons/more.svg?react'
 import AddIcon from './assets/Icons/add.svg?react'
 import { useTheme } from './context/ThemeContext.jsx'
@@ -14,7 +15,7 @@ import { useTheme } from './context/ThemeContext.jsx'
 function App() {
     const [showSideBar, setShowSideBar] = useState(true)
     const { theme } = useTheme()
-
+    const [searchTerm, setSearchTerm] = useState("")
     const user = "Matias"
 
     return (
@@ -36,7 +37,7 @@ function App() {
                     </button>
 
                     <div className="min-w-0 flex-1">
-                        <Header />
+                        <Header searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
                     </div>
                 </div>
 
@@ -57,6 +58,7 @@ function App() {
                         <span>Add Task</span>
                     </button>
                 </div>
+                <SearchResults searchTerm={searchTerm} />
                 <BigCard />
                 <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 lg:items-start">
                     <div className="flex flex-col gap-6">
